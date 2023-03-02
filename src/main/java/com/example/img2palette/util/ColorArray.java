@@ -15,6 +15,10 @@ public class ColorArray {
         this.colors = extractColors(image);
     }
 
+    public int[] getColors(){
+        return this.colors;
+    }
+
     public static int[] extractColors(BufferedImage image) {
         int width, height;
         width = image.getWidth();
