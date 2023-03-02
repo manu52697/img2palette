@@ -3,15 +3,15 @@ package com.example.img2palette.util;
 import java.awt.image.BufferedImage;
 import java.util.Arrays;
 
-public class ColorArray {
+public class ColorExtractor {
 
     private final int[] colors;
 
-    public ColorArray(int[] colors) {
+    public ColorExtractor(int[] colors) {
         this.colors = colors;
     }
 
-    public ColorArray(BufferedImage image) {
+    public ColorExtractor(BufferedImage image) {
         this.colors = extractColors(image);
     }
 
