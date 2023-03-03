@@ -3,6 +3,11 @@ package com.example.img2palette.color;
 import java.awt.Color;
 import java.util.Comparator;
 
+/**
+ * This class holds comparators that can order {@link Color} collections based on each one of the primary
+ * RGB colors.
+ * @author Manuel Artal
+ */
 public class PrimaryColorsComparators {
 
     public static final Comparator<Color> RED = new Comparator<Color>() {

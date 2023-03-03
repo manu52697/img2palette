@@ -2,8 +2,11 @@ package com.example.img2palette.color;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import java.util.Arrays;
 
+/**
+ * This class holds logic for extracting color data from a {@link BufferedImage} instance.
+ * @author Manuel Artal
+ */
 public class ColorExtractor {
 
     private final Color[] colors;
@@ -21,9 +24,9 @@ public class ColorExtractor {
     }
 
     /**
-     * This method reads the color data from a BufferedImage and returns an array stacking the pixel data by column
+     * This method reads the color data from a BufferedImage and returns an array of {@link java.awt.Color} stacking the pixel data by column
      * @param image An BufferedImage instance
-     * @return An array of color values
+     * @return An array of {@link java.awt.Color}
      */
     public static Color[] extractColors(BufferedImage image) {
         int width, height;
@@ -40,4 +43,5 @@ public class ColorExtractor {
 
         return colors;
     }
+
 }

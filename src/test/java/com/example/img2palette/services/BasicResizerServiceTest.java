@@ -9,7 +9,7 @@ import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BasicImageResizerTest {
+class BasicResizerServiceTest {
 
     @Test
     void testResize(){
@@ -21,7 +21,7 @@ class BasicImageResizerTest {
             originalWidth = originalImage.getWidth();
             originalHeight = originalImage.getHeight();
 
-            ResizeService resizer = new BasicImageResizer(200,200);
+            ResizeService resizer = new BasicResizerService(200,200);
             BufferedImage resizedImage = resizer.resize(originalImage);
 
 
