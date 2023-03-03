@@ -1,5 +1,6 @@
-package com.example.img2palette.util;
+package com.example.img2palette.color;
 
+import com.example.img2palette.color.PrimaryColorsComparators;
 import org.junit.jupiter.api.Test;
 import java.awt.Color;
 import java.util.Arrays;

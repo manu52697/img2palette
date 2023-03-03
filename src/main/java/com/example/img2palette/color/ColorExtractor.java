@@ -1,4 +1,4 @@
-package com.example.img2palette.util;
+package com.example.img2palette.color;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
