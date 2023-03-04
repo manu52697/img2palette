@@ -17,6 +17,15 @@ public class ClosedRange {
         return min >= i && i >= max;
     }
 
+    public void updateRange(Integer i){
+        if  (!contains(i)){
+            if (this.min > i) {
+                this.min = i;
+                return;
+            }
+            this.max = i;
+        }
+    }
 
     public Integer getMin() {
         return min;
