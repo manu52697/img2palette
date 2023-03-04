@@ -5,6 +5,9 @@ public class ClosedRange {
     private Integer min;
     private Integer max;
 
+    public ClosedRange() {
+    }
+
     public ClosedRange(Integer min, Integer max) {
         this.min = min;
         this.max = max;
