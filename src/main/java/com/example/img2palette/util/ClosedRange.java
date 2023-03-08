@@ -1,49 +1,57 @@
 package com.example.img2palette.util;
 
+/**
+ * Implementation of a closed, compact range.
+ */
 public class ClosedRange {
 
-    private Integer min;
-    private Integer max;
+    /**
+     * The smallest integer contained in the range.
+     */
+    private final Integer min;
 
-    public ClosedRange() {
-    }
+    /**
+     * The biggest element contained in the range.
+     */
+    private final Integer max;
+
 
     public ClosedRange(Integer min, Integer max) {
         this.min = min;
         this.max = max;
     }
 
+    /**
+     * Checks if the range contains the integer {@code i}.
+     * @param i An integer.
+     * @return True if the number is between the range's limits, false otherwise.
+     */
     public Boolean contains(Integer i){
-        return min >= i && i >= max;
+        return min <= i && i <= max;
     }
 
-    public void updateRange(Integer i){
-        if  (!contains(i)){
-            if (this.min > i) {
-                this.min = i;
-                return;
-            }
-            this.max = i;
-        }
-    }
-
+    /**
+     * Returns the difference between the biggest and the smallest elements in the range.
+     * @return
+     */
     public Integer getRange() {
         return this.max - this.min;
     }
 
+    /**
+     * Returns the smallest integer contained in the range.
+     * @return {@code Integer}
+     */
     public Integer getMin() {
         return min;
     }
 
-    public void setMin(Integer min) {
-        this.min = min;
-    }
-
+    /**
+     * Returns the largest integer contained in the range.
+     * @return {@code Integer}
+     */
     public Integer getMax() {
         return max;
     }
 
-    public void setMax(Integer max) {
-        this.max = max;
-    }
 }
