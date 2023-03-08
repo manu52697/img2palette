@@ -27,6 +27,10 @@ public class ClosedRange {
         }
     }
 
+    public Integer getRange() {
+        return this.max - this.min;
+    }
+
     public Integer getMin() {
         return min;
     }
