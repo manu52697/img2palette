@@ -31,6 +31,22 @@ public class ClosedRange {
     }
 
     /**
+     * Checks if the range contains a given integer. If true, returns itself, else returns a new range including
+     * that integer
+     * @param k an Integer
+     * @return A ClosedRange
+     */
+    public ClosedRange updateRange(Integer k){
+        if (contains(k)){
+            return this;
+        }
+        if (k < min) {
+            return new ClosedRange(k,getMax());
+        }
+        return new ClosedRange(getMin(),k);
+    }
+
+    /**
      * Returns the difference between the biggest and the smallest elements in the range.
      * @return
      */
