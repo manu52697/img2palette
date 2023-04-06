@@ -1,5 +1,8 @@
 package com.example.img2palette.util;
 
+import java.util.Collection;
+import java.util.List;
+
 /**
  * Implementation of a closed, compact range.
  */
@@ -20,6 +23,26 @@ public class ClosedRange {
         this.min = min;
         this.max = max;
     }
+
+    /**
+     * Static constructor that makes a {@code ClosedRange} from a list of integers
+     * @param numbers a list of integers
+     * @return A ClosedRange instance
+     */
+    public static ClosedRange fromList(List<Integer> numbers){
+        Integer min, max;
+        min = numbers.get(0);
+        max = numbers.get(0);
+        for (Integer n : numbers) {
+            if (n < min){
+                min = n;
+            }else if (n > max){
+                max = n;
+            }
+        }
+        return new ClosedRange(min,max);
+    }
+
 
     /**
      * Checks if the range contains the integer {@code i}.
